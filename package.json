@@ -49,6 +49,7 @@
     "react-photo-gallery": "^8.0.0",
     "react-redux": "^7.2.1",
     "react-router-dom": "^6.11.1",
+    "react-scripts": "^5.0.1",
     "redux": "^4.0.5",
     "sass": "^1.62.1"
   },
