@@ -2363,7 +2363,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_document__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_document__WEBPACK_IMPORTED_MODULE_3__);
 
 
-var _jsxFileName = "E:\\meovathay\\application\\pages\\_document.js";
+var _jsxFileName = "C:\\Users\\quang\\OneDrive\\Desktop\\KLTN\\DATN-2023\\pages\\_document.js";
 
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
