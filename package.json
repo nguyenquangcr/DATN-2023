@@ -55,7 +55,7 @@
   },
   "scripts": {
     "start": " node server.js --openssl-legacy-provider",
-    "build": "NODE_ENV=production ENV=production next build",
+    "build": "npm install -g win-node-env && next build",
     "sandbox": "NODE_ENV=sandbox ENV=sandbox pm2 start server.js --name meovathay.sand",
     "production": "NODE_ENV=production ENV=production pm2 start server.js --name meovathay.prod"
   }
