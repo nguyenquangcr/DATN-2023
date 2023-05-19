@@ -1,0 +1,1 @@
+export const domainHeroku = 'https://heroku-backend-nestjs.herokuapp.com';

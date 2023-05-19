@@ -1,0 +1,58 @@
+$tone: #a70e1a;
+
+.featured {
+  a {
+    color: #181717;
+
+    &:hover {
+      color: $tone;
+    }
+  }
+
+  .title {
+    padding-top: 10px;
+    line-height: 26px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+  }
+
+  .thumb-image {
+    overflow: hidden;
+    height: auto;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .tag {
+      font-family: SFD-Bold, Arial, Helvetica, sans-serif;
+      padding: 5px 10px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      background-color: $tone;
+      line-height: 1.5;
+      font-size: 11px;
+      color: #fff;
+    }
+  }
+
+  p.description {
+    margin: 0;
+    color: #565656;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+  }
+}

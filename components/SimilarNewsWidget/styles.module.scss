@@ -1,0 +1,69 @@
+// Similar category news
+.similar-news {
+  .rows {
+    display: flex;
+    flex-direction: row;
+
+    &.space-between {
+      justify-content: space-between;
+    }
+  }
+
+  .card {
+    .card-description {
+      font-size: 13px;
+    }
+  }
+
+  .header {
+    font-family: SFD-Bold;
+    font-size: 24px;
+    line-height: 30px;
+    color: #222;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    padding-top: 30px;
+    &:before {
+      content: '';
+      background: url(/images/bg-split.jpg) repeat-x;
+      top: 0;
+      left: 0;
+      width: 99%;
+      height: 10px;
+      position: absolute;
+    }
+  }
+
+  ul.posts {
+    li {
+      list-style: none;
+    }
+
+    a > img {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+    }
+
+    .post {
+      position: relative;
+      width: 220px;
+      text-overflow: ellipsis;
+      margin-bottom: 30px;
+      cursor: pointer;
+      .post-header {
+        a.title {
+          color: #444;
+          font-weight: 600;
+          font-size: 13px;
+          line-height: 18px;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          display: -webkit-box;
+        }
+      }
+    }
+  }
+}

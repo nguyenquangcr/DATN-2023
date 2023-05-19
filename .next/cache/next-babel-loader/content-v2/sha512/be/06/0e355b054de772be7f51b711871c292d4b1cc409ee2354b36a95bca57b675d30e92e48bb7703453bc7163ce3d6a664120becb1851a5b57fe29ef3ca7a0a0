@@ -1,0 +1,1 @@
+{"ast":null,"code":"export const domainHeroku = 'https://heroku-backend-nestjs.herokuapp.com';","map":{"version":3,"sources":["E:/meovathay/application/config/serverNew.js"],"names":["domainHeroku"],"mappings":"AAAA,OAAO,MAAMA,YAAY,GAAG,6CAArB","sourcesContent":["export const domainHeroku = 'https://heroku-backend-nestjs.herokuapp.com';"]},"metadata":{},"sourceType":"module"}

@@ -1,0 +1,38 @@
+.widget {
+  $tone: #a70e1a;
+  position: relative;
+
+  a {
+    color: #181717;
+
+    &:hover {
+      color: $tone;
+    }
+  }
+
+  .widget-list {
+    .post {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        cursor: pointer;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        &:before {
+          display: inline;
+          content: "• ";
+          color: $tone;
+          font-size: 12px;
+        }
+
+        font-size: 13px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

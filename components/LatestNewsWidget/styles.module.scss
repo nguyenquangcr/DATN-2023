@@ -1,0 +1,82 @@
+.sidebar-latest-news {
+  width: 100%;
+
+  .sidebar-header {
+    margin-bottom: 10px;
+    border: none !important;
+    background: #fff;
+
+    span {
+      font-family: SFD-Bold, Arial, Helvetica, sans-serif;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #2d2d2d;
+      display: block;
+      height: 30px;
+      line-height: 30px;
+      position: relative;
+
+      .icon-clock {
+        font-size: 19px;
+        color: #4a90e2;
+      }
+    }
+  }
+
+  .sidebar-contain {
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #e6e6e6;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    overflow-y: auto;
+
+    ul {
+      padding: 0 5px 0 12px;
+      list-style: none;
+
+      li {
+        width: 100%;
+        font-size: 12px;
+        line-height: 19px;
+        padding: 10px 0;
+        border-bottom: 1px solid #f0f0f0;
+
+        a {
+          display: block;
+          font-family: Arial, serif;
+          color: #0b75b1;
+          text-decoration: none;
+          font-weight: bold;
+
+          .time {
+            vertical-align: top;
+            color: #5a5f62;
+            display: inline-block;
+            margin-right: 5px;
+            font-size: 12px;
+            width: 12.7208480565371%;
+            border-right: 1px solid #f0f0f0;
+            padding-right: 5px;
+            margin-top: 1px;
+          }
+
+          .text {
+            display: inline-block;
+            max-width: 81.27208480565371%;
+          }
+        }
+      }
+
+      li:last-child {
+        border-bottom: none;
+      }
+
+      li:first-of-type {
+        padding-top: 10px;
+      }
+    }
+  }
+}

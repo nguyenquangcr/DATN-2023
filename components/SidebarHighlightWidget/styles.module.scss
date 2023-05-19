@@ -1,0 +1,125 @@
+.horizontal-widget-news {
+  $tone: #a70e1a;
+  width: 320px;
+  position: relative;
+  background: rgb(250, 250, 250);
+
+  a {
+    color: #181717;
+
+    &:hover {
+      color: $tone;
+    }
+  }
+
+  .tab-title {
+    background: #f5f5f5;
+    h2 {
+      padding: 10px 10px 0 10px;
+      border-bottom: 1px solid #d6dce2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #333;
+      span {
+        font-size: 18px;
+        line-height: 140%;
+        font-family: SFD-Bold;
+        text-transform: uppercase;
+        padding-bottom: 7px;
+        display: inline-block;
+        position: relative;
+        color: #334a61;
+        &:after {
+          display: block;
+          width: 100%;
+          height: 1px;
+          position: absolute;
+          bottom: -1px;
+          left: 0;
+          background-color: #f8b019;
+          content: '';
+        }
+      }
+    }
+  }
+
+  .featured {
+    padding: 15px;
+
+    .title {
+      margin: 0 0 10px 0;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+    }
+
+    .thumb-image {
+      overflow: hidden;
+      height: auto;
+      position: relative;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s;
+      }
+
+      .tag {
+        font-family: SFD-Bold, Arial, Helvetica, sans-serif;
+        padding: 5px 10px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        background-color: $tone;
+        line-height: 1.5;
+        font-size: 11px;
+        color: #fff;
+      }
+    }
+
+    p.description {
+      margin: 5px;
+      color: #565656;
+      font-size: 14px;
+      line-height: 20px;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+    }
+  }
+
+  .post-list {
+    padding: 15px;
+    border-top: 1px dashed #eee;
+
+    .post {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+
+      a {
+        cursor: pointer;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        &:before {
+          display: inline;
+          content: "• ";
+          color: $tone;
+          font-size: 12px;
+        }
+
+        font-size: 12px;
+        line-height: 1.5;
+      }
+    }
+  }
+}

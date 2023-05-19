@@ -1,0 +1,114 @@
+.progressive-figure {
+  position: relative;
+  clear: both;
+  outline: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+
+  figcaption {
+    font: 400 13.8px/18px "Arial";
+    background: #f2f2f2;
+    padding: 10px;
+    text-align: left;
+    box-sizing: border-box;
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  figcaption:first-letter {
+    text-transform: uppercase;
+  }
+
+  .aspect-ratio-placeholder {
+    background-color: #f6f6f6;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+
+    .aspect-ratio-placeholder-fill {
+      display: block;
+    }
+
+    .progressive-media {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.05);
+      overflow: hidden;
+
+      .progressive-media-thumb {
+        width: 100%;
+        height: 100%;
+        transition: opacity 1s linear;
+        -webkit-filter: blur(50px);
+        filter: blur(50px);
+        -webkit-transform: scale(1);
+        transform: scale(1);
+      }
+
+      .progressive-media-image {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: auto;
+        z-index: 100;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+      }
+
+      .centered {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate(50%, 50%);
+        -ms-transform: translate(50%, 50%);
+        transform: translate(50%, 50%);
+
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          vertical-align: middle;
+          -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+        }
+      }
+
+      &.is-image-loaded {
+        .progressive-media-thumb {
+          visibility: visible;
+          opacity: 0;
+          -webkit-transition: visibility 0s linear 0s, opacity .4s 0s;
+          transition: visibility 0s linear 0s, opacity .4s 0s;
+        }
+        .progressive-media-image {
+          object-fit: cover;
+          visibility: visible;
+          opacity: 1;
+          -webkit-transition: visibility 0s linear 0s, opacity 1s 0s;
+          transition: visibility 0s linear 0s, opacity 1s 0s;
+        }
+      }
+
+      &.scale-on-hover {
+        transition: transform 0.3s;
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+}

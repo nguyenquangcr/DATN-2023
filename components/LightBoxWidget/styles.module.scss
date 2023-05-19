@@ -1,0 +1,116 @@
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.95;
+  cursor: pointer;
+  visibility: visible;
+  display: block;
+  z-index: 9999;
+}
+
+.light-box-slideshow {
+  display: block;
+  visibility: visible;
+  position: fixed;
+  top: 20px;
+  left: 250px;
+  width: 941px;
+  height: 534px;
+  z-index: 9999;
+  .slide-current {
+    position: fixed;
+    top: 45px;
+    left: 20px;
+    font-weight: bold;
+    color: #ccc;
+  }
+  .button-close {
+    position: fixed;
+    top: 40px;
+    right: 20px;
+    background: url(/images/controls.png) no-repeat -100px 0px;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    &:hover {
+      background-position: -100px -50px;
+    }
+  }
+  .previous-slide {
+    left: 20px;
+    top: 50%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    position: fixed;
+    right: 20px;
+    background: url(/images/controls.png) no-repeat -250px 0px;
+    width: 40px;
+    height: 80px;
+    cursor: pointer;
+    &:hover {
+      background-position: -300px 0px;
+    }
+  }
+  .next-slide {
+    right: 20px;
+    top: 50%;
+    border: 0;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    position: fixed;
+    background: url(/images/controls.png) no-repeat -150px 0px;
+    width: 40px;
+    height: 80px;
+    cursor: pointer;
+    &:hover {
+      background-position: -200px 0px;
+    }
+  }
+  .title {
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    text-align: center;
+    width: 96%;
+    color: #fff;
+    line-height: 20px;
+    font-size: 15px;
+    padding: 0 20px;
+    z-index: 9999;
+    span {
+      background: #000;
+      padding: 10px;
+      border-radius: 3px;
+    }
+  }
+  .photos {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    .photo-item {
+      display: none;
+      position: relative;
+      max-width: 100%;
+      max-height: 900px;
+      margin: 0 auto;
+      text-align: center;
+      width: auto !important;
+      cursor: pointer;
+      &.active {
+        display: block;
+      }
+      img {
+        max-width: 100%;
+        border-radius: 2px;
+      }
+    }
+  }
+}

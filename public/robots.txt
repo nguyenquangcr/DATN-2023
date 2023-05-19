@@ -1,0 +1,5 @@
+User-Agent: *
+Disallow:
+Sitemap: https://meovathay.vn/sitemap.xml
+Sitemap: https://meovathay.vn/sitemap/category.xml
+Sitemap: https://meovathay.vn/sitemap/tags.xml
