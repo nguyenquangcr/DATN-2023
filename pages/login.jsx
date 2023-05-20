@@ -7,30 +7,10 @@ import {useDispatch, useSelector} from 'react-redux';
 import {setProfileUser, setToken} from '../store';
 import {apiLogin, getProfileUser} from '../services/Login/login';
 
-// User Login info
-const database = [
-    {
-        username: 'user1',
-        password: 'pass1'
-    },
-    {
-        username: 'user2',
-        password: 'pass2'
-    }
-];
-  
-const errors = {
-    uname: 'invalid username',
-    pass: 'invalid password'
-};
-
 const Login = () => {
-    const dispatch = useDispatch();
-    const state = useSelector((state) => state);
+    const dispatch = useDispatch(); 
     
     //state
-    const [errorMessages, setErrorMessages] = useState({});
-    const [isSubmitted, setIsSubmitted] = useState(false);
 
     const handleSubmit = async (event) => {
         //Prevent page reload
@@ -48,6 +28,10 @@ const Login = () => {
 
                 if (profileUser.status == 200) 
                 {
+                    notification.success({
+                        message: 'Đăng nhập thành công!',
+                        duration: 500
+                    });
                     dispatch(setProfileUser(profileUser.data));
                     localStorage.setItem('profileUser',JSON.stringify(profileUser.data));
                     setTimeout(() => {
@@ -56,57 +40,62 @@ const Login = () => {
                 }
             }
         } catch (error) {
-            console.log('error:', error);
-            
+            notification.error({
+                message: 'Sai tài khoản hoặc mật khẩu!',
+                duration: 500
+            });
         }
     };  
 
     return (
         <>
+            <button onClick={()=>{
+                api.open({
+                    message: 'Notification Title',
+                    description:
+                      'I will never close automatically. This is a purposely very very long description that has many many characters and words.',
+                    duration: 0
+                });
+            }}>a</button>
             <div className={classname(styles['box-form'])}>
                 <div className={classname(styles['left'])}>
                     <div className={classname(styles['overlay'])}>
-                        <h1>Hello World.</h1>
-                        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur et
-          est sed felis aliquet sollicitudin
-                        </p>
+                        <h1>ĐĂNG NHẬP.</h1>
                         <span>
-                            <p>login with social media</p>
+                            <p>Đăng nhập với các nền tảng mạng xã hội</p>
                             <a href="#">
                                 <i className="fa fa-facebook" aria-hidden="true" />
                             </a>
                             <a href="#">
-                                <i className="fa fa-twitter" aria-hidden="true" /> Login with
-            Twitter
+                                <i className="fa fa-google" aria-hidden="true" /> Login with
+            Google
                             </a>
                         </span>
                     </div>
                 </div>
-                <form onSubmit={handleSubmit}>
+                <form style={{minWidth: '350px'}} onSubmit={handleSubmit}>
                     <div className={classname(styles['right'])}>
-                        <h5>Login</h5>
-                        <p>
+                        <h5 className='mt-5'>Đăng nhập</h5>
+                        {/* <p>
                             {'Don\'t'} have an account? <a href="#">Creat Your Account</a> it takes less
         than a minute
-                        </p>
+                        </p> */}
                         <div className={classname(styles['inputs'])}>
-                            <input type="text" name="uname" placeholder="user name" />
+                            <input type="text" name="uname" placeholder="Tên đăng nhập" />
                             <br />
-                            <input type="password" name="pass" placeholder="password" />
+                            <input type="password" name="pass" placeholder="Mật khẩu" />
                         </div>
                         <br />
                         <br />
-                        <div className={classname(styles['remember-me--forget-password'])}>
-                            {/* Angular */}
+                        {/* <div className={classname(styles['remember-me--forget-password'])}>
                             <label>
                                 <input type="checkbox" name="item" defaultChecked="" />
-                                <span className={classname(styles['text-checkbox'])}>Remember me</span>
+                                <span className={classname(styles['text-checkbox'])}>Nhớ tôi</span>
                             </label>
-                            <p>forget password?</p>
-                        </div>
+                            <p>Quên mật khẩu?</p>
+                        </div> */}
                         <br />
-                        <button type='submit'>Login</button>
+                        <button type='submit'>Đăng nhập</button>
                     </div>
                 </form>
             </div>

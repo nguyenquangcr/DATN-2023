@@ -1,0 +1,27 @@
+.post-not-found {
+  text-align: center;
+  background: #fff;
+  padding-bottom: 60px;
+  font-size: 14px;
+  img {
+    width: 60%;
+    max-width: 100%;
+  }
+  p {
+    line-height: 24px;
+    &:last-child {
+      margin-bottom: 20px;
+    }
+  }
+  .go-back-to-home {
+    background: #50cc84;
+    color: #fff;
+    padding: 10px 15px;
+    font-family: SFD-Bold;
+    font-size: 20px;
+    border-radius: 3px;
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+  }
+}
