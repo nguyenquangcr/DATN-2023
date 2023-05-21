@@ -49,14 +49,6 @@ const Login = () => {
 
     return (
         <>
-            <button onClick={()=>{
-                api.open({
-                    message: 'Notification Title',
-                    description:
-                      'I will never close automatically. This is a purposely very very long description that has many many characters and words.',
-                    duration: 0
-                });
-            }}>a</button>
             <div className={classname(styles['box-form'])}>
                 <div className={classname(styles['left'])}>
                     <div className={classname(styles['overlay'])}>
