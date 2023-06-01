@@ -24,6 +24,7 @@ import styles from 'Modules/Pages/Post/styles.module.scss';
 // Utils
 import Constant from 'Config/constant';
 import {handleError, getObjectPropSafely, quoteDoubleToSingle} from 'Libs/utils';
+import TagComponent from '../components/TagComponent';
 
 const PATH = 'application/pages/post.jsx';
 
@@ -547,6 +548,7 @@ class Post extends React.Component {
 
         return  (
             <Fragment>
+                <TagComponent post={post} />
                 <div ref={this.myRef} className={classname('container', styles['container'])}>
                     {
                         post && post.title ? (
