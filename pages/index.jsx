@@ -21,6 +21,7 @@ import Constant from 'Config/constant';
 
 // Assets
 import styles from 'Modules/Pages/Home/styles.module.scss';
+import {getListPostUser} from '../services/Login/login';
 
 const PATH = 'application/pages/index.jsx';
 const BOX_VERTICAL_NEWS_STYLE = 1;
@@ -82,10 +83,37 @@ class Home extends React.Component {
             let arrTopPid = [];
             let horizontalNews = [];
 
+            await getListPostUser().then(res=>{
+                return res?.data?.map(item=>{
+                    latest.push({
+                        pid: item?.id,
+                        title: item?.title,
+                        description: item?.description,
+                        slug: item?.title,
+                        href: `https://meovathay.vn/${item?.id}`,
+                        thumb: item?.linkImage,
+                        background: item?.linkImage,
+                        time: '2021-03-07 15:39:47'
+                    })
+                    if (item?.tags == 'thoitrang') {
+                        return featureNews.push({
+                            pid: item?.id,
+                            title: item?.title,
+                            description: item?.description,
+                            slug: item?.title,
+                            href: `https://meovathay.vn/${item?.id}`,
+                            thumb: item?.linkImage,
+                            background: item?.linkImage,
+                            time: '2021-03-07 15:39:47'
+                        });}
+                });
+
+            });
             if (getHomePosts) {
                 await getHomePosts.then((response) => {
+                    // console.log('response:', response.data.data);
                     if (response && response.data && response.data.data) {
-                        latest = response.data.data.latest || [];
+                        latest = [...latest, ...response.data.data.latest] || [];
                         top = response.data.data.top || [];
                         category = response.data.data.category || [];
 

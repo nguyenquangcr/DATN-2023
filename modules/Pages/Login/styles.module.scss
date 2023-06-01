@@ -147,6 +147,24 @@ label {
     display: none;
   }
 }
+
+.box-btl-login {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  span {
+    font-size: 13px;
+    font-weight: 600;
+    color: blue;
+    cursor: pointer;
+  }
+  button {
+    cursor: pointer;
+    &:hover {
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+  }
+}
 @media (max-width: 980px) {
   .box-form {
     flex-flow: wrap;
