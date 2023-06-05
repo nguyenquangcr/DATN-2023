@@ -68,9 +68,8 @@ const Login = () => {
                 });
             }
         }
-    };  
-
-    
+    };
+  
     return (
         <>
             <div className={classname(styles['box-form'])}>
