@@ -10,7 +10,7 @@ import {apiLogin, apiSignUp, getProfileUser} from '../services/Login/login';
 const Login = () => {
     const dispatch = useDispatch(); 
     //state
-    const [statusForm, setStatusForm] = useState(false);
+    const [statusForm, setStatusForm] = useState(true);
 
     const handleSubmit = async (event) => {
         //Prevent page reload
