@@ -14,6 +14,7 @@ const Login = () => {
 
     const handleSubmit = async (event) => {
         //Prevent page reload
+        //slapping the keycap to make something good happen
         event.preventDefault();
 
         var {name, uname, pass} = document.forms[0];
